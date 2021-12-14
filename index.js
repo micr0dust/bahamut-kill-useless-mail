@@ -10,7 +10,7 @@ process.on('uncaughtException', function(err) {
 
 (async() => {
     const browser = await puppeteer.launch({
-        executablePath: "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+        executablePath: auth.browser(),
         headless: true
     });
     const page = await browser.newPage();
@@ -57,7 +57,7 @@ process.on('uncaughtException', function(err) {
         return count;
     }
 
-    async function nextPageFn() {
+    /*async function nextPageFn() {
         const nextPage = await page.evaluate(async() => {
             const onext = document.querySelector('#list_div > span:nth-child(10) > a');
             if (!onext) return false;
@@ -65,7 +65,7 @@ process.on('uncaughtException', function(err) {
             return false;
         });
         return nextPage;
-    }
+    }*/
 
     async function nextPageClickFn() {
         await page.evaluate(async() => {

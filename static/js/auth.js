@@ -5,6 +5,9 @@ var authData = {
     },
     password: function(info) {
         return process.env.PASSWORD
+    },
+    browser: function(info) {
+        return process.env.BROWSER
     }
 };
 

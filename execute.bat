@@ -1,7 +1,7 @@
 @echo off
 echo ============================
-echo 巴哈姆特系統垃圾文件自動清理
 echo made by Microdust
 echo ============================
-cd C:\Users\Microdust\microdust\code\nodeJS\bahamut-kill-useless-mail
+echo Deleting Bahamut's useless mail...
+cd ./
 node .\index.js
