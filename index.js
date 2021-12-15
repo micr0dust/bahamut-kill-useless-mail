@@ -67,13 +67,13 @@ process.on('uncaughtException', function(err) {
         return nextPage;
     }*/
 
-    async function nextPageClickFn() {
+    /*async function nextPageClickFn() {
         await page.evaluate(async() => {
             const onext = document.querySelector('#list_div > span:nth-child(10) > a');
             if (!onext) return false;
             if (onext.innerText === '下一頁') onext.click();
         });
-    }
+    }*/
 
     //console.log(await nextPageFn());
     /*
