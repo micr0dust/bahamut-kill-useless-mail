@@ -19,7 +19,6 @@ process.on('uncaughtException', function(err) {
     await page.type('#form-login > div.password-box > input', auth.password());
     await page.click('#btn-login');
     await page.waitForNavigation();
-    //await page.screenshot({ path: 'mailbox.png' });
 
     async function mailDelFn() {
         try {
@@ -48,42 +47,12 @@ process.on('uncaughtException', function(err) {
             console.log("已刪除" + count + "封垃圾通知");
             return count;
         });
-        //await page.waitForSelector('#list_div > button:nth-child(8)');
-        //await page.click('#list_div > button:nth-child(8)');
         await page.waitForSelector('.dialogify > form > div > div > div.btn-box.text-right > button.btn.btn-insert.btn-primary');
         await page.click('.dialogify > form > div > div > div.btn-box.text-right > button.btn.btn-insert.btn-primary');
         await page.waitForSelector('.dialogify > form > div > div > div.btn-box.text-center > button');
         await page.click('.dialogify > form > div > div > div.btn-box.text-center > button');
         return count;
     }
-
-    /*async function nextPageFn() {
-        const nextPage = await page.evaluate(async() => {
-            const onext = document.querySelector('#list_div > span:nth-child(10) > a');
-            if (!onext) return false;
-            if (onext.innerText === '下一頁') return true;
-            return false;
-        });
-        return nextPage;
-    }*/
-
-    /*async function nextPageClickFn() {
-        await page.evaluate(async() => {
-            const onext = document.querySelector('#list_div > span:nth-child(10) > a');
-            if (!onext) return false;
-            if (onext.innerText === '下一頁') onext.click();
-        });
-    }*/
-
-    //console.log(await nextPageFn());
-    /*
-        while (await nextPageFn()) {
-            while (await mailDelFn());
-            await nextPageClickFn();
-        }
-    */
     while (await mailDelFn());
-
-    //await mailDelFn();
     await browser.close();
 })();
