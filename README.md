@@ -3,4 +3,4 @@
 
 須下載下來執行，我還不會用github action
 
-[![](https://github.com/wuilliam104286/image_saves/blob/master/img/button/btn-dl-red-ch.png?raw=true)](https://github.com/wuilliam104286/bahamut-kill-useless-mail/releases/tag/v1.0)
+[![](https://github.com/micr0dust/image_saves/blob/master/img/button/btn-dl-red-ch.png?raw=true)](https://github.com/micr0dust/bahamut-kill-useless-mail/releases/tag/v1.0)
